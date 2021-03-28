@@ -1,0 +1,73 @@
+    body {
+      margin: 40px;
+    }
+    
+    .wrapper {
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: [col] 330px [col] 290px [col] 330px [col] 290px  ;
+        grid-template-rows: [row] auto [row] auto [row] ;
+        background-color: #fff;
+        color: #000000;
+      }
+    
+      .box {
+        background-color: #000000;
+        color: #fff;
+        border-radius: 5px;
+        padding: 6px;
+        font-size: 130%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    
+      .a {
+        text-align: right;
+        grid-column: col / span 2;
+        grid-row: row ;
+      }
+      .b {
+        text-align: left;
+        grid-column: col 3 / span 2 ;
+        grid-row: row ;
+      }
+      .c {
+        grid-column: col ;
+        grid-row: row 2 ;
+      }
+      .d {
+        color: black;
+        background-color: #ffffff;
+        grid-column: col 2 / span 3 ;
+        grid-row: row 2 ;
+      }
+    
+      .e {
+        grid-column: col / span 4;
+        grid-row: row 3;
+      }
+
+      a{
+        color: cornsilk;
+        text-decoration: none;
+      }
+  
+      a:hover{
+        color: red;
+        text-decoration: none;
+      }
+  
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #ff0000;
+      }

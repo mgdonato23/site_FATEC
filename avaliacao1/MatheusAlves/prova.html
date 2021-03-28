@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <title>Página FATEC</title>
+    <link rel="stylesheet" href="css/pagina.css">
+    <meta charset="utf-8">
+	
+
+	
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+        <div class="box a">
+            <img src="img/logo_fatec.png" style="display: block; float: left;">
+            <h2>Programação WEB</h2>
+        </div>
+
+        <div class="box b">
+            <img src="img/logo_cps.png" style="display: block; float: right;">
+            <h2>Prova</h2>
+        </div>
+
+        <div class="box c">
+            <h3 align="center">MENU</h3>
+            <menu>
+                <a href wm-nav="paginas/html_intro.html">HTML Introduction</a> <br>
+                <a href wm-nav="paginas/html_id.html">HTML Id</a> <br>
+                <a href wm-nav="paginas/html_class.html">HTML Class</a> <br>
+                <a href wm-nav="paginas/html_forms.html">HTML Forms</a> <br>
+                <a href wm-nav="paginas/css_intro.html">CSS Introduction</a> <br>
+                <a href wm-nav="paginas/css_border.html">CSS Bordes</a> <br>
+                <a href wm-nav="paginas/css_margins.html">CSS Margins</a> <br>
+                <a href wm-nav="paginas/css_padding.html">CSS Padding</a> <br>
+            </menu>           
+            <h3 align="center">TABELA</h3>
+            <menu>
+                <a href wm-nav="paginas/lista_produtos.html">Lista de Notebooks</a> <br>
+            </menu>
+            
+        </div>
+        
+        <div class="box d" id="conteudo">
+            <center>
+                <h3 >Linguagens</h3>
+                <img src="img/div_conteudo.jpg" ; height="300" width="450">
+            </center>
+            
+        </div>
+        
+        <div class="box e">
+            <h3>Fatec Taquaritinga</h3>
+            <h5>Av. Dr. Flávio Henrique Lemos, 585 - Portal Itamaracá, Taquaritinga - SP, CEP: 15906-522</h5>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+    
+</body>
+
+</html>
